@@ -1,0 +1,34 @@
+<html>
+
+<head></head>
+
+<body>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script>
+    $.get('data/customers.json', function (customers) {
+      var page = $.map(customers, function (customer) {
+        var ul = $('<ul>');
+        
+        // name //
+        var li = $('<li>').text("Name: " + customer["name"]);
+        ul.append(li);
+        
+        // gender //
+        var li = $('<li>').text("Gender: " + customer["gender"]);
+        ul.append(li);
+        
+        for (var key in customer) {
+          if (Array.isArray(customer[key])) {
+            var li = $('<li>').text(key + ": " + customer[key]);
+            ul.append(li);
+          }
+        }
+        return ul;
+      });
+      $('body').append(page);
+    });
+  </script>
+</body>
+
+</html>
