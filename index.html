@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Code is Fun!</title>
+  <title>jQuery Four</title>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/notes/notes.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/custom.css" type="text/css" />
@@ -18,7 +20,6 @@
     <nav>
       <header>My Services</header>
       <ul>
-        <li><a href="directions.html" target="_blank">Directions</a></li>
         <li><a href="#" id="aPosts">Posts</a></li>
         <li><a href="#" id="aSoundCloud">Sound Cloud</a></li>
         <li><a href="#" id="aSearchWikipedia">Search Wikipedia</a></li>
@@ -38,13 +39,13 @@
       // see: http://api.jquery.com/one/
 
       // TODO 1 : Assign a one-time event handler to the click event of aPosts //
-      
+
 
       // TODO 3 : Assign a one-time event handler to the click event of aSearchWikipedia //
-      
+
 
       // TODO 5 : Assign a one-time event handler to the click event of #aSoundCloud //
-      
+
 
       /*
        * Below are several functions that initialize datasets to be consumed 
@@ -98,6 +99,11 @@
         $('#searchResults').append($('<div>').text(arg));
       });
     }
+  </script>
+  <script>
+    $(function () {
+      window.opspark.notes.show();
+    });
   </script>
 </body>
 
